@@ -1,5 +1,7 @@
 #include "register_types.h"
 
+#include "movement.h"
+
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
@@ -10,6 +12,8 @@ void initialize_module(ModuleInitializationLevel p_level) {
     if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
         return;
     }
+
+    ClassDB::register_class<Movement>();
 }
 
 void uninitialize_module(ModuleInitializationLevel p_level) {
